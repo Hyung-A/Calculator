@@ -2,16 +2,6 @@ package com.ohgiraffers.run;
 
 public class Divide {
 
-    public static void main(String[] args) {
-        Divide dv = new Divide();
-
-        int result = dv.divideFunction(10,0);
-        System.out.println("result = " + result);
-
-
-    }
-
-
     public int divideFunction(int a, int b){
         int result = 0;
 
