@@ -6,30 +6,30 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Application Calculator = new Application();
+
         Scanner sc = new Scanner(System.in);
         System.out.print("계산하고싶은 첫 번째 정수를 입력해주세요 : ");
         int firstNum = sc.nextInt();
         System.out.print("계산하고싶은 두 번째 정수를 입력해주세요 : ");
         int secondNum = sc.nextInt();
+        sc.nextLine();
+        System.out.print("계산하고 싶은 연산자를 입력해주세요 (+, -, *, /, %) : ");
+        String cal = sc.nextLine();
 
-//        Calculator.plusFunction(firstNum, secondNum);
-//        Calculator.minusFunction(firstNum, secondNum);
-        Calculator.multipleFunction(firstNum, secondNum);
-//        Calculator.divideFunction(firstNum, secondNum);
-//        Calculator.modFunction(firstNum, secondNum);
+        int result = 0;
+        switch (cal){
+//            case "+" : Plus calculator = new Plus();
+//                       result = calculation.plusFunction(firstNum, secondNum); break;
+//            case "-" : Minus calculator = new Minus();
+//                       result = calculation.minusFunction(firstNum, secondNum); break;
+            case "*" : Multiple calculator = new Multiple();
+                       result = calculator.multipleFunction(firstNum, secondNum);
+//            case "/" : Divide calculator  = new Divide();
+//                       result = calculator.divideFunction(firstNum, secondNum); break;
+//            case "%" : Mod calculator = new Mod();
+//                       result = calculator.modFunction(firstNum, secondNum); break;
+        }
 
-
-
+        System.out.println(firstNum + cal + secondNum + " = " + result);
     }
-
-    // 곱하기 기능 만들기
-    public int multipleFunction(int a, int b){
-
-        int result = a * b;
-        System.out.println(a + " * " + b + " = " + result);
-
-        return result;
-    }
-
 }
